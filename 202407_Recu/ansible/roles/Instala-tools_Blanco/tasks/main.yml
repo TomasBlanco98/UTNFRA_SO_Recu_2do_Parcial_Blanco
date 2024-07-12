@@ -1,0 +1,14 @@
+---
+# tasks file for Instala-tools_Blanco
+# tasks file for Instala-tools_Blanco
+- name: Instalar herramientas
+  become: true
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - htop
+    - net-tools
+    - tmux
+    - tree
+    - speedtest-cli

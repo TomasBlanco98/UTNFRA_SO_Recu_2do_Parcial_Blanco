@@ -1,0 +1,8 @@
+---
+# vars file for 2PRecuperatorio
+NOMBRE: "Tomas"
+APELLIDO: "Blanco"
+DIVISION: "116"
+FECHA: “{{ ansible_date_time.date }}”
+DISTRIBUCION: "{{ ansible_facts['distribution'] }}"
+CORES: "{{ ansible_facts['processor_cores'] }}"

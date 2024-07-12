@@ -1,0 +1,81 @@
+2024-07-12 12:52:01,366 p=6557 u=blanco n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-12 12:52:02,150 p=6557 u=blanco n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2024-07-12 12:52:02,173 p=6557 u=blanco n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-07-12 12:52:06,534 p=6557 u=blanco n=ansible | ok: [localhost]
+2024-07-12 12:52:07,749 p=6557 u=blanco n=ansible | ok: [127.0.0.1]
+2024-07-12 12:52:07,808 p=6557 u=blanco n=ansible | TASK [include_role : 2PRecuperatorio] **********************************************************************************************************************************************************
+2024-07-12 12:52:07,939 p=6557 u=blanco n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] **************************************************************************************************************************************************
+2024-07-12 12:52:07,977 p=6557 u=blanco n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 12:52:07,994 p=6557 u=blanco n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 12:52:08,011 p=6557 u=blanco n=ansible | TASK [2PRecuperatorio : Crear directorios en /tmp/] ********************************************************************************************************************************************
+2024-07-12 12:52:08,728 p=6557 u=blanco n=ansible | changed: [localhost] => (item=alumno)
+2024-07-12 12:52:08,859 p=6557 u=blanco n=ansible | ok: [127.0.0.1] => (item=alumno)
+2024-07-12 12:52:08,897 p=6557 u=blanco n=ansible | TASK [2PRecuperatorio : Agrego archivo desde template] *****************************************************************************************************************************************
+2024-07-12 12:52:10,410 p=6557 u=blanco n=ansible | changed: [localhost]
+2024-07-12 12:52:10,482 p=6557 u=blanco n=ansible | ok: [127.0.0.1]
+2024-07-12 12:52:10,523 p=6557 u=blanco n=ansible | TASK [include_role : Instala-tools_Blanco] *****************************************************************************************************************************************************
+2024-07-12 12:52:10,634 p=6557 u=blanco n=ansible | TASK [Instala-tools_Blanco : Instalar herramientas] ********************************************************************************************************************************************
+2024-07-12 12:52:13,545 p=6557 u=blanco n=ansible | ok: [localhost] => (item=htop)
+2024-07-12 12:52:13,741 p=6557 u=blanco n=ansible | ok: [127.0.0.1] => (item=htop)
+2024-07-12 12:52:15,902 p=6557 u=blanco n=ansible | failed: [127.0.0.1] (item=net-tools) => {"ansible_loop_var": "item", "cache_update_time": 1720784644, "cache_updated": false, "changed": false, "item": "net-tools", "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'net-tools=1.60+git20181103.0eebece-1ubuntu5'' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stderr": "E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "stderr_lines": ["E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?"], "stdout": "", "stdout_lines": []}
+2024-07-12 12:52:17,988 p=6557 u=blanco n=ansible | ok: [127.0.0.1] => (item=tmux)
+2024-07-12 12:52:22,455 p=6557 u=blanco n=ansible | failed: [127.0.0.1] (item=tree) => {"ansible_loop_var": "item", "cache_update_time": 1720784644, "cache_updated": false, "changed": false, "item": "tree", "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'tree=2.0.2-1'' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stderr": "E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "stderr_lines": ["E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?"], "stdout": "", "stdout_lines": []}
+2024-07-12 12:52:24,873 p=6557 u=blanco n=ansible | failed: [127.0.0.1] (item=speedtest-cli) => {"ansible_loop_var": "item", "cache_update_time": 1720784644, "cache_updated": false, "changed": false, "item": "speedtest-cli", "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'speedtest-cli=2.1.3-2'' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stderr": "E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "stderr_lines": ["E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 7160 (apt-get)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?"], "stdout": "", "stdout_lines": []}
+2024-07-12 12:52:28,311 p=6557 u=blanco n=ansible | changed: [localhost] => (item=net-tools)
+2024-07-12 12:52:30,057 p=6557 u=blanco n=ansible | ok: [localhost] => (item=tmux)
+2024-07-12 12:52:40,154 p=6557 u=blanco n=ansible | changed: [localhost] => (item=tree)
+2024-07-12 12:52:50,344 p=6557 u=blanco n=ansible | changed: [localhost] => (item=speedtest-cli)
+2024-07-12 12:52:50,379 p=6557 u=blanco n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************************************
+2024-07-12 12:52:50,402 p=6557 u=blanco n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 12:52:50,490 p=6557 u=blanco n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-07-12 12:52:50,491 p=6557 u=blanco n=ansible | 127.0.0.1                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 12:52:50,492 p=6557 u=blanco n=ansible | localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-12 12:52:58,756 p=7712 u=blanco n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-12 12:52:59,149 p=7712 u=blanco n=ansible | PLAY [all] *************************************************************************************************************************************************************************************
+2024-07-12 12:52:59,166 p=7712 u=blanco n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************
+2024-07-12 12:53:01,888 p=7712 u=blanco n=ansible | ok: [localhost]
+2024-07-12 12:53:02,006 p=7712 u=blanco n=ansible | ok: [127.0.0.1]
+2024-07-12 12:53:02,103 p=7712 u=blanco n=ansible | TASK [include_role : 2PRecuperatorio] **********************************************************************************************************************************************************
+2024-07-12 12:53:02,213 p=7712 u=blanco n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] **************************************************************************************************************************************************
+2024-07-12 12:53:02,247 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 12:53:02,270 p=7712 u=blanco n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 12:53:02,287 p=7712 u=blanco n=ansible | TASK [2PRecuperatorio : Crear directorios en /tmp/] ********************************************************************************************************************************************
+2024-07-12 12:53:03,113 p=7712 u=blanco n=ansible | changed: [localhost] => (item=alumno)
+2024-07-12 12:53:03,232 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=alumno)
+2024-07-12 12:53:03,256 p=7712 u=blanco n=ansible | TASK [2PRecuperatorio : Agrego archivo desde template] *****************************************************************************************************************************************
+2024-07-12 12:53:04,785 p=7712 u=blanco n=ansible | ok: [localhost]
+2024-07-12 12:53:04,836 p=7712 u=blanco n=ansible | ok: [127.0.0.1]
+2024-07-12 12:53:04,878 p=7712 u=blanco n=ansible | TASK [include_role : Instala-tools_Blanco] *****************************************************************************************************************************************************
+2024-07-12 12:53:04,984 p=7712 u=blanco n=ansible | TASK [Instala-tools_Blanco : Instalar herramientas] ********************************************************************************************************************************************
+2024-07-12 12:53:07,231 p=7712 u=blanco n=ansible | ok: [localhost] => (item=htop)
+2024-07-12 12:53:07,499 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=htop)
+2024-07-12 12:53:09,497 p=7712 u=blanco n=ansible | ok: [localhost] => (item=net-tools)
+2024-07-12 12:53:10,042 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=net-tools)
+2024-07-12 12:53:11,528 p=7712 u=blanco n=ansible | ok: [localhost] => (item=tmux)
+2024-07-12 12:53:12,313 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=tmux)
+2024-07-12 12:53:13,563 p=7712 u=blanco n=ansible | ok: [localhost] => (item=tree)
+2024-07-12 12:53:14,753 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=tree)
+2024-07-12 12:53:15,850 p=7712 u=blanco n=ansible | ok: [localhost] => (item=speedtest-cli)
+2024-07-12 12:53:17,185 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => (item=speedtest-cli)
+2024-07-12 12:53:17,296 p=7712 u=blanco n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************************************
+2024-07-12 12:53:17,327 p=7712 u=blanco n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 12:53:17,343 p=7712 u=blanco n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 12:53:17,455 p=7712 u=blanco n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************
+2024-07-12 12:53:17,455 p=7712 u=blanco n=ansible | 127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-12 12:53:17,456 p=7712 u=blanco n=ansible | localhost                  : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

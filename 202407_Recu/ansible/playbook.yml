@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  tasks:
+    - include_role:
+        name: 2PRecuperatorio
+    - include_role:
+        name: Instala-tools_Blanco
+
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+
